@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "{{fontName}}";
+    src: {{{src}}};
+}
+
+%icon {
+    font-family: "{{fontName}}";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    vertical-align: top;
+}
+
+@function icon-char($filename) {
+    $char: "";
+
+    {{#each codepoints}}
+    @if $filename == {{@key}} {
+        $char: "\\{{this}}";
+    }
+    {{/each}}
+
+    @return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+    &:#{$insert} {
+        @extend %icon;
+        content: icon-char($filename);
+    }
+}
+
+{{#each codepoints}}
+.icon-{{@key}} {
+    @include icon({{@key}});
+}
+{{/each}}
