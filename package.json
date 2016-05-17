@@ -1,0 +1,22 @@
+{
+  "name": "afom-webfont",
+  "version": "0.1.0",
+  "main": "index.js",
+  "bin": {
+    "afom-webfont": "bin/index.js"
+  },
+  "dependencies": {
+    "chokidar": "^1.5.0",
+    "commander": "^2.9.0",
+    "glob": "^7.0.3",
+    "webfonts-generator": "^0.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
