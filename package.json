@@ -18,5 +18,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Generate webfont files from SVG icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afriendofmine/afom-webfont.git"
+  },
+  "bugs": {
+    "url": "https://github.com/afriendofmine/afom-webfont/issues"
+  },
+  "homepage": "https://github.com/afriendofmine/afom-webfont#readme"
 }
